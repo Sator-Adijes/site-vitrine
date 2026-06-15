@@ -1,1 +1,4 @@
-// types partagés de l'application
+export type City = {
+  name: string;
+  coordinates: [number, number];
+};
