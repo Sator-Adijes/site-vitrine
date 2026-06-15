@@ -1,5 +1,11 @@
 import React from 'react';
 
+import imgVelo from '@/assets/0kdPMLFO.jpeg';
+import imgCuisine from '@/assets/_ClPuEg8.jpeg';
+import imgSportsMecaniques from '@/assets/dgrtUz99.jpeg';
+import imgMangas from '@/assets/GaIqe7w9.jpeg';
+import imgPlongee from '@/assets/IMG_20260521_204753(1).jpg';
+import imgEscalade from '@/assets/Q0hsYiK5.jpeg';
 import { PassionCard } from '@/components/PassionCard';
 
 type Passion = {
@@ -8,12 +14,12 @@ type Passion = {
 };
 
 const PASSIONS: Passion[] = [
-  { label: 'Voitures' },
-  { label: 'Plongée' },
-  { label: 'Mangas' },
-  { label: 'Cuisine' },
-  { label: 'Vélo' },
-  { label: 'Escalade' },
+  { label: 'Plongée', image: imgPlongee },
+  { label: 'Mangas', image: imgMangas },
+  { label: 'Cuisine', image: imgCuisine },
+  { label: 'Vélo', image: imgVelo },
+  { label: 'Escalade', image: imgEscalade },
+  { label: 'Sports Mécaniques', image: imgSportsMecaniques },
 ];
 
 export const PassionsPage = (): React.JSX.Element => (

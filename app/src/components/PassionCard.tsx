@@ -7,7 +7,7 @@ type Props = {
 
 export const PassionCard = ({ label, image }: Props): React.JSX.Element => (
   <div className="flex flex-col rounded-md shadow-sm overflow-hidden border border-neutral-200">
-    <div className="w-full h-[180px] bg-neutral-100 flex items-center justify-center">
+    <div className="w-full h-[280px] bg-neutral-100 flex items-center justify-center">
       {image ? (
         <img src={image} alt={label} className="w-full h-full object-cover" />
       ) : (

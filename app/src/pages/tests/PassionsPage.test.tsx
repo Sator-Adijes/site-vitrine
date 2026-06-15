@@ -25,7 +25,7 @@ describe('<PassionsPage />', () => {
   it('should render all passion cards', () => {
     render(<PassionsPage />);
 
-    expect(screen.getByText('Voitures')).toBeInTheDocument();
+    expect(screen.getByText('Sports Mécaniques')).toBeInTheDocument();
     expect(screen.getByText('Plongée')).toBeInTheDocument();
     expect(screen.getByText('Mangas')).toBeInTheDocument();
     expect(screen.getByText('Cuisine')).toBeInTheDocument();
@@ -33,9 +33,9 @@ describe('<PassionsPage />', () => {
     expect(screen.getByText('Escalade')).toBeInTheDocument();
   });
 
-  it('should render 6 cards', () => {
+  it('should render 6 passion images', () => {
     render(<PassionsPage />);
 
-    expect(screen.getAllByText('Image à venir')).toHaveLength(6);
+    expect(screen.getAllByRole('img')).toHaveLength(6);
   });
 });

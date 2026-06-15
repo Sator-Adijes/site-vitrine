@@ -1,22 +1,17 @@
 import React from 'react';
 
-type LegProps = {
+import { CountryCard } from '@/components/CountryCard';
+
+type CountryProps = {
   country: string;
+  flag: string;
   cities: string[];
 };
 
-const Leg = ({ country, cities }: LegProps): React.JSX.Element => (
-  <div className="mb-xl">
-    <h2 className="text-h5 font-bold text-neutral-900 mb-xs pb-xs border-b border-neutral-200">
-      {country}
-    </h2>
-    <p className="text-b2 text-primary font-medium leading-relaxed">{cities.join(' → ')}</p>
-  </div>
-);
-
-const LEGS: LegProps[] = [
+const COUNTRIES: CountryProps[] = [
   {
     country: 'Thaïlande',
+    flag: '🇹🇭',
     cities: [
       'Bangkok',
       'Ayutthaya',
@@ -30,14 +25,26 @@ const LEGS: LegProps[] = [
       'Khanom',
       'Koh Tao',
       'Bangkok',
+      'Koh Lanta',
     ],
   },
   {
     country: 'Laos',
-    cities: ['Vientiane', 'Vang Vieng', 'Luang Prabang', 'Nong Khiaw', 'Muang Ngoi', 'Muang Khua'],
+    flag: '🇱🇦',
+    cities: [
+      'Vientiane',
+      'Vang Vieng',
+      'Luang Prabang',
+      'Nong Khiaw',
+      'Muang Ngoi',
+      'Muang Khua',
+      'Don Det',
+      'Paksé',
+    ],
   },
   {
     country: 'Vietnam',
+    flag: '🇻🇳',
     cities: [
       'Dien Bien Phu',
       'Mu Cang Chai',
@@ -52,22 +59,17 @@ const LEGS: LegProps[] = [
   },
   {
     country: 'Cambodge',
+    flag: '🇰🇭',
     cities: ['Phnom Penh', 'Koh Rong Samloen', 'Siem Reap', 'Kratie'],
   },
   {
-    country: 'Laos',
-    cities: ['Don Det', 'Paksé'],
-  },
-  {
-    country: 'Thaïlande',
-    cities: ['Bangkok', 'Koh Lanta'],
-  },
-  {
     country: 'Malaisie & Singapour',
+    flag: '🇲🇾🇸🇬',
     cities: ['Penang', 'Îles Perhentian', 'Île Tenggol', 'Île Tioman', 'Singapour'],
   },
   {
     country: 'Indonésie',
+    flag: '🇮🇩',
     cities: [
       'Batam',
       'Jakarta',
@@ -86,20 +88,25 @@ const LEGS: LegProps[] = [
 
 export const VoyagePage = (): React.JSX.Element => (
   <main className="flex flex-1 flex-col items-center bg-white px-md py-xxl">
-    <div className="w-full max-w-[700px]">
+    <div className="w-full max-w-[900px]">
       <h1 className="text-h2 font-bold text-neutral-900 mb-xs">Mon voyage</h1>
-      <p className="text-h5 text-neutral-600 mb-xxl">8 mois en Asie du Sud-Est, sans avion</p>
-
-      <p className="text-b1 text-neutral-700 leading-relaxed mb-xxl">
-        Après 4 ans chez hemea, ma compagne et moi sommes partis 8 mois traverser l'Asie du Sud-Est
-        sans jamais prendre l'avion — uniquement en bus (de nuit ou de jour), trains, bateaux (lents
-        et rapides, le plus long a duré 34h) et frontières terrestres. 7 pays, une trentaine de
-        villes, et une façon différente d'appréhender le temps et l'essentiel.
+      <p className="text-h5 text-neutral-600 mb-xxl">
+        8 mois en Asie du Sud-Est, sans avion (ou presque)
       </p>
 
-      {LEGS.map(leg => (
-        <Leg key={leg.country} {...leg} />
-      ))}
+      <p className="text-b1 text-neutral-700 leading-relaxed mb-xxl">
+        Depuis plusieurs années nous avions mûri un projet avec ma compagne, partir découvrir l'Asie
+        du Sud-Est, avec le moins d'avion possible. Nous sommes partis en septembre 2025 et rentrés
+        en juin 2026. Voici notre itinéraire, uniquement en bus (de nuit ou de jour), trains et
+        bateaux (lents et rapides, le plus long a duré 34h). Nous n'aurons pris l'avion que pour
+        arriver en Asie et en revenir, l'aller jusqu'à Bangkok et le retour depuis Jakarta.
+      </p>
+
+      <div className="grid grid-cols-2 gap-lg">
+        {COUNTRIES.map(c => (
+          <CountryCard key={c.country} {...c} />
+        ))}
+      </div>
     </div>
   </main>
 );

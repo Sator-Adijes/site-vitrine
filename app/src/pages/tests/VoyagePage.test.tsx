@@ -16,10 +16,10 @@ describe('<VoyagePage />', () => {
 
   it('should render the subtitle', () => {
     render(<VoyagePage />);
-    expect(screen.getByText('8 mois en Asie du Sud-Est, sans avion')).toBeInTheDocument();
+    expect(screen.getByText('8 mois en Asie du Sud-Est, sans avion (ou presque)')).toBeInTheDocument();
   });
 
-  it('should render all country sections', () => {
+  it('should render all country cards', () => {
     render(<VoyagePage />);
     expect(screen.getByText('Thaïlande')).toBeInTheDocument();
     expect(screen.getByText('Laos')).toBeInTheDocument();
@@ -27,5 +27,10 @@ describe('<VoyagePage />', () => {
     expect(screen.getByText('Cambodge')).toBeInTheDocument();
     expect(screen.getByText('Malaisie & Singapour')).toBeInTheDocument();
     expect(screen.getByText('Indonésie')).toBeInTheDocument();
+  });
+
+  it('should render 6 country cards', () => {
+    render(<VoyagePage />);
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(6);
   });
 });
