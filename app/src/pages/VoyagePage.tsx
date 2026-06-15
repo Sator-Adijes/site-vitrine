@@ -6,12 +6,18 @@ type CountryProps = {
   country: string;
   flag: string;
   cities: string[];
+  isoCodes: string[];
+  mapCenter: [number, number];
+  mapScale: number;
 };
 
 const COUNTRIES: CountryProps[] = [
   {
     country: 'Thaïlande',
     flag: '🇹🇭',
+    isoCodes: ['764'],
+    mapCenter: [101, 15],
+    mapScale: 1000,
     cities: [
       'Bangkok',
       'Ayutthaya',
@@ -31,6 +37,9 @@ const COUNTRIES: CountryProps[] = [
   {
     country: 'Laos',
     flag: '🇱🇦',
+    isoCodes: ['418'],
+    mapCenter: [103, 18],
+    mapScale: 1800,
     cities: [
       'Vientiane',
       'Vang Vieng',
@@ -45,6 +54,9 @@ const COUNTRIES: CountryProps[] = [
   {
     country: 'Vietnam',
     flag: '🇻🇳',
+    isoCodes: ['704'],
+    mapCenter: [108, 16],
+    mapScale: 1000,
     cities: [
       'Dien Bien Phu',
       'Mu Cang Chai',
@@ -60,16 +72,25 @@ const COUNTRIES: CountryProps[] = [
   {
     country: 'Cambodge',
     flag: '🇰🇭',
+    isoCodes: ['116'],
+    mapCenter: [105, 12],
+    mapScale: 2200,
     cities: ['Phnom Penh', 'Koh Rong Samloen', 'Siem Reap', 'Kratie'],
   },
   {
     country: 'Malaisie & Singapour',
     flag: '🇲🇾🇸🇬',
+    isoCodes: ['458', '702'],
+    mapCenter: [113, 4],
+    mapScale: 900,
     cities: ['Penang', 'Îles Perhentian', 'Île Tenggol', 'Île Tioman', 'Singapour'],
   },
   {
     country: 'Indonésie',
     flag: '🇮🇩',
+    isoCodes: ['360'],
+    mapCenter: [118, -2],
+    mapScale: 550,
     cities: [
       'Batam',
       'Jakarta',
