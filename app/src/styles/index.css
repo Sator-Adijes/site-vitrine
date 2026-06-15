@@ -1,0 +1,205 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', Helvetica, Arial, sans-serif;
+
+  --color-*: initial;
+  --color-inherit: inherit;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-dark: #21180f;
+  --color-primarydark: #7c5027;
+  --color-primarylight: #e5dacf;
+  --color-primarylighter: #f6f1ed;
+  --color-progreen: #1c3f3f;
+  --color-danger: #990d35;
+  --color-light: #e4e4e4;
+  --color-lighter: #f4f4f4;
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-100: #f4f4f4;
+  --color-neutral-200: #e4e4e4;
+  --color-neutral-300: #cdcdcd;
+  --color-neutral-400: #aeaeae;
+  --color-neutral-500: #8f8f8f;
+  --color-neutral-600: #727272;
+  --color-neutral-700: #575757;
+  --color-neutral-800: #292929;
+  --color-neutral-900: #191919;
+  --color-neutral: #191919;
+
+  --color-gray-100: #f4f4f4;
+  --color-gray-200: #e4e4e4;
+  --color-gray-300: #cdcdcd;
+  --color-gray-600: #727272;
+  --color-gray-800: #424242;
+  --color-gray-900: #292929;
+
+  --color-error-50: #ffeaed;
+  --color-error-100: #ffcacf;
+  --color-error-200: #f39594;
+  --color-error-300: #e96a6a;
+  --color-error-400: #f34544;
+  --color-error-500: #f72f26;
+  --color-error-600: #e92227;
+  --color-error-700: #d71221;
+  --color-error-800: #ca0219;
+  --color-error-900: #bc000a;
+  --color-error: #ca0219;
+
+  --color-warning-50: #fef4e5;
+  --color-warning-100: #fde2bd;
+  --color-warning-200: #fcd094;
+  --color-warning-300: #fbbd6c;
+  --color-warning-400: #faaf53;
+  --color-warning-500: #f8a247;
+  --color-warning-600: #f39743;
+  --color-warning-700: #eb893e;
+  --color-warning-800: #e37b3b;
+  --color-warning-900: #d66737;
+  --color-warning: #e37b3b;
+
+  --color-success-50: #e6f6ee;
+  --color-success-100: #c6e8d6;
+  --color-success-200: #a3dabd;
+  --color-success-300: #7dcca4;
+  --color-success-400: #60c191;
+  --color-success-500: #43b67e;
+  --color-success-600: #3ca672;
+  --color-success-700: #359465;
+  --color-success-800: #308259;
+  --color-success-900: #286244;
+  --color-success: #308259;
+
+  --color-info-50: #e8eaf3;
+  --color-info-100: #c5cbe2;
+  --color-info-200: #a0a9ce;
+  --color-info-300: #7c87ba;
+  --color-info-400: #616dac;
+  --color-info-500: #47549f;
+  --color-info-600: #414c96;
+  --color-info-700: #38438a;
+  --color-info-800: #31397d;
+  --color-info-900: #252867;
+  --color-info: #47549f;
+
+  --color-primary-50: #ffe9c6;
+  --color-primary-100: #f3cca9;
+  --color-primary-200: #d9ad89;
+  --color-primary-300: #bd8f65;
+  --color-primary-400: #a7774a;
+  --color-primary-500: #91602f;
+  --color-primary-600: #855629;
+  --color-primary-700: #764920;
+  --color-primary-800: #683b19;
+  --color-primary-900: #592c10;
+  --color-primary: #a7774a;
+
+  --color-green-50: #e0eff2;
+  --color-green-100: #b0d9df;
+  --color-green-200: #7dc1c9;
+  --color-green-300: #49a9b2;
+  --color-green-400: #2297a0;
+  --color-green-500: #00858c;
+  --color-green-600: #00797f;
+  --color-green-700: #026a6e;
+  --color-green-800: #075a5d;
+  --color-green-900: #0b3f3f;
+  --color-green: #0b3f3f;
+
+  --color-blue-50: #e6eaef;
+  --color-blue-100: #c0c9d8;
+  --color-blue-200: #99a7bd;
+  --color-blue-300: #7385a2;
+  --color-blue-400: #556c90;
+  --color-blue-500: #365480;
+  --color-blue-600: #2f4c78;
+  --color-blue-700: #27436c;
+  --color-blue-800: #223960;
+  --color-blue-900: #1a2947;
+  --color-blue: #1a2947;
+
+  --color-lightgreen-50: #c2e8d5;
+  --color-lightgreen-100: #c2e8d5;
+  --color-lightgreen-200: #9bdabb;
+  --color-lightgreen-300: #6ecd9f;
+  --color-lightgreen-400: #46c28a;
+  --color-lightgreen-500: #00b775;
+  --color-lightgreen-600: #00a76a;
+  --color-lightgreen-700: #00955d;
+  --color-lightgreen-800: #008351;
+  --color-lightgreen-900: #00643a;
+  --color-lightgreen: #9bdabb;
+
+  --color-beige-50: #fbf0e0;
+  --color-beige-100: #f5d8b1;
+  --color-beige-200: #efbe7c;
+  --color-beige-300: #eaa346;
+  --color-beige-400: #e7901d;
+  --color-beige-500: #e37f00;
+  --color-beige-600: #df7400;
+  --color-beige-700: #d96400;
+  --color-beige-800: #d35500;
+  --color-beige-900: #c93900;
+  --color-beige: #efbe7c;
+
+  --spacing-*: initial;
+  --spacing-0: 0;
+  --spacing-3xs: 0.125rem;
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-xmd: 1.25rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  --radius-*: initial;
+  --radius: 0.25rem;
+  --radius-xxs: 0.25rem;
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-full: 9999rem;
+  --radius-none: 0px;
+
+  --text-*: initial;
+  --text-xl: 4rem;
+  --text-xl--line-height: 5rem;
+  --text-h1: 3rem;
+  --text-h1--line-height: 4rem;
+  --text-h2: 2.5rem;
+  --text-h2--line-height: 3.5rem;
+  --text-h3: 2rem;
+  --text-h3--line-height: 2.75rem;
+  --text-h4: 1.5rem;
+  --text-h4--line-height: 2rem;
+  --text-h5: 1.25rem;
+  --text-h5--line-height: 1.75rem;
+  --text-b1: 1rem;
+  --text-b1--line-height: 1.5rem;
+  --text-b2: 0.875rem;
+  --text-b2--line-height: 1.25rem;
+  --text-sm: 0.75rem;
+  --text-sm--line-height: 1rem;
+  --text-xs: 0.625rem;
+  --text-xs--line-height: 1rem;
+
+  --shadow-*: initial;
+  --shadow: 0px 4px 8px rgba(25, 25, 25, 0.08);
+  --shadow-xxs: 0px 2px 4px rgba(25, 25, 25, 0.04);
+  --shadow-xs: 0px 2px 4px rgba(25, 25, 25, 0.08);
+  --shadow-sm: 0px 4px 8px rgba(25, 25, 25, 0.08);
+  --shadow-md: 0px 4px 8px rgba(25, 25, 25, 0.16);
+  --shadow-lg: 0px 8px 16px rgba(25, 25, 25, 0.16);
+  --shadow-xl: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  --shadow-none: none;
+}
+
+html, body, #root {
+  height: 100vh;
+  height: 100dvh;
+}
