@@ -110,14 +110,13 @@ const ALL_ISO_CODES = COUNTRIES.flatMap(c => c.isoCodes);
 const ALL_CITIES = COUNTRIES.flatMap(c => c.cities);
 
 export const VoyagePage = (): React.JSX.Element => (
-  <main className="flex flex-1 flex-col items-center bg-white px-md py-xxl">
+  <main className="flex flex-1 flex-col items-center bg-white px-md pb-xxl pt-md">
     <div className="w-full max-w-[900px]">
       <h1 className="text-h2 font-bold text-neutral-900 mb-xs">Mon voyage</h1>
-      <p className="text-h5 text-neutral-600 mb-xxl">
+      <p className="text-h5 text-neutral-600 mb-lg">
         8 mois en Asie du Sud-Est, sans avion (ou presque)
       </p>
-
-      <p className="text-b1 text-neutral-700 leading-relaxed mb-xxl">
+      <p className="text-b1 text-neutral-700 leading-relaxed mb-xl">
         Depuis plusieurs années nous avions mûri un projet avec ma compagne, partir découvrir l'Asie
         du Sud-Est, avec le moins d'avion possible. Nous sommes partis en septembre 2025 et rentrés
         en juin 2026. Voici notre itinéraire, uniquement en bus (de nuit ou de jour), trains et

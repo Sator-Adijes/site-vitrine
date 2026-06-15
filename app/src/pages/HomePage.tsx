@@ -23,7 +23,7 @@ const NavCard = ({
 );
 
 export const HomePage = (): React.JSX.Element => (
-  <main className="flex flex-1 flex-col items-center bg-white px-md py-xxl">
+  <main className="flex flex-1 flex-col items-center bg-white px-md pb-xxl pt-md">
     <div className="w-full max-w-[700px]">
       <div className="mb-xxl">
         <p className="text-b2 text-primary font-bold uppercase tracking-widest mb-xs">

@@ -23,7 +23,7 @@ const PASSIONS: Passion[] = [
 ];
 
 export const PassionsPage = (): React.JSX.Element => (
-  <main className="flex flex-1 flex-col items-center bg-white px-md py-xxl">
+  <main className="flex flex-1 flex-col items-center bg-white px-md pb-xxl pt-md">
     <div className="w-full max-w-[900px]">
       <h1 className="text-h2 font-bold text-neutral-900 mb-xs">Mes passions</h1>
       <p className="text-h5 text-neutral-600 mb-xxl">Découvrez ce qui me passionne</p>

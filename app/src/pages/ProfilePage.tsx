@@ -18,7 +18,7 @@ const Section = ({
 );
 
 export const ProfilePage = (): React.JSX.Element => (
-  <main className="flex flex-1 flex-col items-center bg-white px-md py-xxl">
+  <main className="flex flex-1 flex-col items-center bg-white px-md pb-xxl pt-md">
     <div className="w-full max-w-[700px]">
       <div className="mb-xxl">
         <h1 className="text-h2 font-bold text-neutral-900 mb-xxs">Sator Adijes</h1>
