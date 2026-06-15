@@ -80,9 +80,9 @@ const COUNTRIES: CountryProps[] = [
     isoCodes: ['458', '702'],
     cities: [
       { name: 'Penang', coordinates: [100.329, 5.4141] },
-      { name: 'Îles Perhentian', coordinates: [102.7667, 5.9167] },
-      { name: 'Île Tenggol', coordinates: [103.6667, 4.8] },
-      { name: 'Île Tioman', coordinates: [104.1667, 2.8167] },
+      { name: 'Perhentian', coordinates: [102.7667, 5.9167] },
+      { name: 'Tenggol', coordinates: [103.6667, 4.8] },
+      { name: 'Tioman', coordinates: [104.1667, 2.8167] },
       { name: 'Singapour', coordinates: [103.8198, 1.3521] },
     ],
   },

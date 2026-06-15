@@ -29,6 +29,6 @@ describe('<CountryInfo />', () => {
   it('should render the cities as a route', () => {
     render(<CountryInfo {...defaultProps} />);
 
-    expect(screen.getByText('Hanoi → Ha Long → Ninh Binh')).toBeInTheDocument();
+    expect(screen.getByText('Hanoi / Ha Long / Ninh Binh')).toBeInTheDocument();
   });
 });
