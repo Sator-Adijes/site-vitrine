@@ -128,8 +128,8 @@ export const VoyagePage = (): React.JSX.Element => (
         <div className="h-[300px] sm:h-[500px] bg-neutral-100">
           <CountryMap
             isoCodes={ALL_ISO_CODES}
-            center={[110, 9]}
-            scale={700}
+            center={[110, 7.5]}
+            scale={800}
             cities={ALL_CITIES}
             svgWidth={900}
             svgHeight={500}

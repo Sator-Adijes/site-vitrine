@@ -47,10 +47,9 @@ export const HomePage = (): React.JSX.Element => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-md mb-xxl">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-md mb-xxl">
         <NavCard to="/profile" label="Mon profil" sub="Parcours & expériences" />
         <NavCard to="/passions" label="Mes passions" sub="Ce qui me fait vibrer" />
-        <NavCard to="/voyage" label="Mon voyage" sub="8 mois en Asie sans avion" />
         <NavCard to="/projects" label="Mes projets" sub="Ce sur quoi je travaille" />
       </div>
     </div>

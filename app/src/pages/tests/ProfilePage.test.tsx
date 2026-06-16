@@ -39,7 +39,9 @@ describe('<ProfilePage />', () => {
     render(<ProfilePage />);
 
     expect(screen.getByText('Formation')).toBeInTheDocument();
-    expect(screen.getAllByText('EPITECH – European Institute of Technology').length).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByText('EPITECH – European Institute of Technology').length,
+    ).toBeGreaterThanOrEqual(1);
   });
 
   it('should render the volunteering section', () => {

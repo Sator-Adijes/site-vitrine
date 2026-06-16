@@ -31,7 +31,6 @@ describe('<HomePage />', () => {
     renderWithRouter();
     expect(screen.getByRole('link', { name: /Mon profil/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Mes passions/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Mon voyage/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Mes projets/i })).toBeInTheDocument();
   });
 });

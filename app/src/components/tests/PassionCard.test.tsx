@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { MemoryRouter } from 'react-router';
+import { describe, expect, it } from 'vitest';
 
 import { PassionCard } from '../PassionCard';
 
@@ -28,5 +29,35 @@ describe('<PassionCard />', () => {
     render(<PassionCard label="Voitures" image="/voitures.jpg" />);
 
     expect(screen.queryByText('Image à venir')).not.toBeInTheDocument();
+  });
+
+  it('should render a custom imageElement instead of the placeholder', () => {
+    render(<PassionCard label="Voitures" imageElement={<div>custom</div>} />);
+
+    expect(screen.getByText('custom')).toBeInTheDocument();
+    expect(screen.queryByText('Image à venir')).not.toBeInTheDocument();
+  });
+
+  it('should render a custom imageElement instead of the image', () => {
+    render(<PassionCard label="Voitures" image="/voitures.jpg" imageElement={<div>custom</div>} />);
+
+    expect(screen.getByText('custom')).toBeInTheDocument();
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+  });
+
+  it('should render as a link when to is provided', () => {
+    render(
+      <MemoryRouter>
+        <PassionCard label="Voitures" to="/voitures" />
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByRole('link', { name: /Voitures/ })).toBeInTheDocument();
+  });
+
+  it('should render as a div when to is not provided', () => {
+    render(<PassionCard label="Voitures" />);
+
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
   });
 });

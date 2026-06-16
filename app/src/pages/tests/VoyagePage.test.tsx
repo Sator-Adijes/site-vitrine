@@ -16,7 +16,9 @@ describe('<VoyagePage />', () => {
 
   it('should render the subtitle', () => {
     render(<VoyagePage />);
-    expect(screen.getByText('8 mois en Asie du Sud-Est, sans avion (ou presque)')).toBeInTheDocument();
+    expect(
+      screen.getByText('8 mois en Asie du Sud-Est, sans avion (ou presque)'),
+    ).toBeInTheDocument();
   });
 
   it('should render all country cards', () => {

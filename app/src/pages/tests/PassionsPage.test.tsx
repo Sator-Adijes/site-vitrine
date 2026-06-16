@@ -1,29 +1,37 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { MemoryRouter } from 'react-router';
+import { describe, expect, it } from 'vitest';
 
 import { PassionsPage } from '../PassionsPage';
 
+const renderWithRouter = (): ReturnType<typeof render> =>
+  render(
+    <MemoryRouter>
+      <PassionsPage />
+    </MemoryRouter>,
+  );
+
 describe('<PassionsPage />', () => {
   it('should render the heading', () => {
-    render(<PassionsPage />);
+    renderWithRouter();
 
     expect(screen.getByText('Mes passions')).toBeInTheDocument();
   });
 
   it('should render the subtitle', () => {
-    render(<PassionsPage />);
+    renderWithRouter();
 
     expect(screen.getByText('Découvrez ce qui me passionne')).toBeInTheDocument();
   });
 
   it('should render a main landmark', () => {
-    render(<PassionsPage />);
+    renderWithRouter();
 
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('should render all passion cards', () => {
-    render(<PassionsPage />);
+    renderWithRouter();
 
     expect(screen.getByText('Sports Mécaniques')).toBeInTheDocument();
     expect(screen.getByText('Plongée')).toBeInTheDocument();
@@ -34,8 +42,21 @@ describe('<PassionsPage />', () => {
   });
 
   it('should render 6 passion images', () => {
-    render(<PassionsPage />);
+    renderWithRouter();
 
     expect(screen.getAllByRole('img')).toHaveLength(6);
+  });
+
+  it('should render the voyage card as a link', () => {
+    renderWithRouter();
+
+    expect(screen.getByRole('link', { name: /Mon voyage/ })).toBeInTheDocument();
+  });
+
+  it('should link the voyage card to /passions/voyage', () => {
+    renderWithRouter();
+
+    const link = screen.getByRole('link', { name: /Mon voyage/ });
+    expect(link).toHaveAttribute('href', '/passions/voyage');
   });
 });

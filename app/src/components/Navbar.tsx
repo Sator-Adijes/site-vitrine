@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { to: '/', label: 'Accueil' },
   { to: '/profile', label: 'Profil' },
   { to: '/passions', label: 'Mes passions' },
-  { to: '/voyage', label: 'Mon voyage' },
   { to: '/projects', label: 'Mes projets' },
 ];
 
@@ -66,7 +65,7 @@ export const Navbar = (): React.JSX.Element => {
       </div>
 
       {open && (
-        <div className="flex sm:hidden flex-col px-md pb-sm border-t border-neutral-200">
+        <div className="flex sm:hidden flex-col px-md pt-sm pb-sm border-t border-neutral-200">
           {NAV_LINKS.map(({ to, label }) => (
             <NavLink
               key={to}
