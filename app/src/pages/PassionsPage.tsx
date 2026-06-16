@@ -27,7 +27,7 @@ export const PassionsPage = (): React.JSX.Element => (
     <div className="w-full max-w-[900px]">
       <h1 className="text-h2 font-bold text-neutral-900 mb-xs">Mes passions</h1>
       <p className="text-h5 text-neutral-600 mb-xxl">Découvrez ce qui me passionne</p>
-      <div className="grid grid-cols-3 gap-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
         {PASSIONS.map(passion => (
           <PassionCard key={passion.label} {...passion} />
         ))}

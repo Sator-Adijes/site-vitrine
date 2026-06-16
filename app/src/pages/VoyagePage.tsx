@@ -125,7 +125,7 @@ export const VoyagePage = (): React.JSX.Element => (
       </p>
 
       <div className="rounded-md border border-neutral-200 shadow-sm overflow-hidden">
-        <div className="h-[500px] bg-neutral-100">
+        <div className="h-[300px] sm:h-[500px] bg-neutral-100">
           <CountryMap
             isoCodes={ALL_ISO_CODES}
             center={[110, 9]}
@@ -135,7 +135,7 @@ export const VoyagePage = (): React.JSX.Element => (
             svgHeight={500}
           />
         </div>
-        <div className="grid grid-cols-3 bg-neutral-200 gap-px border-t border-neutral-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-neutral-200 gap-px border-t border-neutral-200">
           {COUNTRIES.map(c => (
             <div key={c.country} className="bg-white">
               <CountryInfo country={c.country} flag={c.flag} cities={c.cities} />
